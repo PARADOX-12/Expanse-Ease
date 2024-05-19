@@ -11,8 +11,6 @@ function DashboardHeader() {
         <UserButton/>
       </div>
 
-
-
     </div>
   )
 }
