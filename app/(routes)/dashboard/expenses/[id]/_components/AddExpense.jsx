@@ -4,9 +4,11 @@ import {Button} from "@/components/ui/button"
 import { db } from "@/utils/dbConfig";
 import { Expenses } from "@/utils/schema";
 import {toast} from "sonner"
+import moment from "moment";
+import { isMoment } from "moment/moment";
 
 
-function AddExpenses({budgetId, user}){
+function AddExpenses({budgetId, user,refreshData}){
     const[name, setName]=useState("")
     const[amount, setAmount]=useState("")
 
@@ -17,11 +19,12 @@ function AddExpenses({budgetId, user}){
                 amount: parseFloat(amount),
                 budgetId: parseInt(budgetId),
                 createdAt: new Date(),
-                createdBy: user?.primaryEmailAddress?.emailAddress
+                createdBy:moment().format('DD/MM/yyy')
             }).returning({insertedId:Expenses.id});
 
             console.log(result);
             if (result) {
+                refreshData()
                 toast.success('New Expense Added!');
             }
         } catch (error) {
