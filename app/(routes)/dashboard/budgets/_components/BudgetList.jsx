@@ -30,6 +30,7 @@ function BudgetList() {
 
     
     setBudgetList(result);
+    console.log(result)
   }
     return (
        <div className='mt-7'>

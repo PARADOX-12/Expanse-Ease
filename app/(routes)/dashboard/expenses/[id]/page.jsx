@@ -107,27 +107,27 @@ const AlertDialogDemo = () => (
 
     return (
         <div className='p-10'>
-            <h2 className="text-2xl font-bold flex justify-between items-center">My Expenses
+            <h2 className='text-2xl font-bold flex justify-between items-center'>My Expenses
 
-                <div className="flex gap-2 items-center">
+                <div className='flex gap-2 items-center'>
                 <EditBudget budgetInfo={budgetInfo}
                 refreshData={()=>getBudgetInfo()}/>
                  <AlertDialogDemo/>
                  </div>
                 
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 mt-6 gab-3">
+            <div className='grid grid-cols-1 md:grid-cols-2 mt-6 gab-3'>
                 {budgetInfo?<BudgetItem
                 budget={budgetInfo}
                 />:
-                <div className="h-[150px] w-full bg-slate-200 
-                rounded-lg animate-pulse">
+                <div className='h-[150px] w-full bg-slate-200 
+                rounded-lg animate-pulse'>
             </div>}
             <AddExpenses budgetId={params.id}
             user = {user}
             refreshData={()=>getBudgetInfo()}/>
             </div>
-            <div className="mt-4">
+            <div className='mt-4'>
                 
                 <ExpenseListTable expensesList={expensesList}
                 refreshData={()=>getBudgetInfo()}
