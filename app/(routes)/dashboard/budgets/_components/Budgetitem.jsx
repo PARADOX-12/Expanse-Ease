@@ -8,7 +8,8 @@ function BudgetItem({budget}) {
         return perc.toFixed(2);
     }
     return (
-        <Link href={'/dashboard/expenses/'+ budget?.id} className='p-5 border rounded-lg
+        <Link href={'/dashboard/expenses/'+ budget?.id} >
+            <div className='p-5 border rounded-lg
         hover:shadow-md cursor-pointer h-[170px]'>
             <div className='flex gap-2 items-center jsutify-between'>
             <div className='flex gap-2 items-center'>
@@ -37,6 +38,8 @@ function BudgetItem({budget}) {
                     </div>
 
                 </div>
+            </div>
+
             </div>
         </Link>
     )

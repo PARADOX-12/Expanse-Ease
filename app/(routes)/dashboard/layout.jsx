@@ -26,9 +26,9 @@ function DashboardLayout({children}) {
     .where(eq(Budgets.createdBy, user?.primary))
   
     console.log(result)
-    if(result?.length == 0){
-      router.replace('/dashboard/budgets')
-    }
+    // if(result?.length == 0){
+    //   router.replace('/dashboard/budgets')
+    // }
     }
     catch (error){
       console.log(error)
