@@ -45,7 +45,6 @@ function AddExpenses({ budgetId, user, refreshData }) {
 
         setLoading(true);
         try {
-            
             const result = await db.insert(Expenses).values({
                 name: name,
                 amount: newExpenseAmount,
