@@ -45,7 +45,7 @@ function AddExpenses({ budgetId, user, refreshData }) {
 
         setLoading(true);
         try {
-            if (newTotalSpend < budget.amount){
+            
             const result = await db.insert(Expenses).values({
                 name: name,
                 amount: newExpenseAmount,
@@ -61,10 +61,7 @@ function AddExpenses({ budgetId, user, refreshData }) {
                 toast.success('New Expense Added!');
             }
         }
-        else{
-        toast.error("Amount exceeds the budget limit.");
-        }
-        } catch (error) {
+        catch (error) {
             console.error("Error adding new expense:", error);
             toast.error("Failed to add expense. Please try again.");
         } finally {
