@@ -2,7 +2,6 @@ import React from 'react'
 import { Bar, BarChart, Legend, Tooltip, XAxis, YAxis, ResponsiveContainer } from 'recharts'
 
 function BarChartDashboard({ budgetList }) {
-  // Ensure budgetList is an array to avoid runtime errors
   if (!Array.isArray(budgetList) || budgetList.length === 0) {
     return <p>No data available</p>
   }

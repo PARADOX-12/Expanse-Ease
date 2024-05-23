@@ -116,7 +116,7 @@ const AlertDialogDemo = () => (
                  </div>
                 
             </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 mt-6 gab-3'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-5 mt-6'>
                 {budgetInfo?<BudgetItem
                 budget={budgetInfo}
                 />:
